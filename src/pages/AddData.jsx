@@ -9,7 +9,7 @@ let words=''
   const onSubmit = (data) => {
     const apiEndpoint = "https://en.wikipedia.org/w/api.php";
     const params = {
-      action: "opensearch",
+      action: "query",
       list: "search",
       srsearch: data.wikiTitle,
       format: "json",
@@ -24,7 +24,7 @@ let words=''
         } else {
           //   const pages = response.query.random;
           //   pages.forEach(page => {
-          console.log(response);
+          console.log(response.query);
           // words=response.query.search[0].snippet
           //   });
         }
